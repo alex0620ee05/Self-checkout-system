@@ -1,5 +1,7 @@
 # *Preparing the SD Card for Vitis AI Library v1.2*
 
+* *All of following steps are on the target(ZCU104 board)*
+
 * The following files and directories should be put into `/home/root/` :
   1. `jsons/` 
   2. `scripts/`
