@@ -36,10 +36,10 @@
 
 One time, and one time only, you must apply the patch in the hw_src directory against the Vitis Vision library.
 
-    $ cd hw_src/Vitis_Libraries
+    $ cd ../../../hw_src/Vitis_Libraries
     $ patch -p1 < ../vision_lib_area_resize_ii_fix.patch
     
-    $ cd hw_src
+    $ cd ../hw_src
     $ make
 
 ### Reference
