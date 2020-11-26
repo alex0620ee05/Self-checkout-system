@@ -52,7 +52,7 @@ One time, and one time only, you must apply the patch in the hw_src directory ag
   
 ### Preparing the SD Card for Vitis AI Library v1.2
 
-**See <https://github.com/alex0620ee05/Self-checkout-system/blob/main/set_up_files/README.md> for more detail**
+See <https://github.com/alex0620ee05/Self-checkout-system/blob/main/set_up_files/README.md> for more detail
 
 
 ### Reference
