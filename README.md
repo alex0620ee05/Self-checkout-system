@@ -32,6 +32,16 @@
 
 * It's possible that errors occur when `petalinux-config kernel`, `petalinux-build`, `petalinux-build --sdk`. You should properly modify `Makefile` in `02-ivas-ml/platform/dev/zcu104_vcu` and `02-ivas-ml/platform/dev/zcu104_vcu/petalinux` to re do the command which got errors(`make` again in `02-ivas-ml/platform/dev/zcu104_vcu`)
 
+**4. Build the Vitis design(Adding the DPU ip)**
+
+One time, and one time only, you must apply the patch in the hw_src directory against the Vitis Vision library.
+
+    $ cd hw_src/Vitis_Libraries
+    $ patch -p1 < ../vision_lib_area_resize_ii_fix.patch
+    
+    $ cd hw_src
+    $ make
+
 ### Reference
 
 <https://github.com/Xilinx/Vitis-In-Depth-Tutorial/tree/master/Runtime_and_System_Optimization/Design_Tutorials/02-ivas-ml>
