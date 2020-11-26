@@ -1,4 +1,10 @@
-If all steps are done , you can upload this file to your zcu104 board.
+# **Running the project**
 
-python3 DEMO.py to excute the Self-checkout-system demo
+* Following steps are on the target(ZCU104):
+
+If all settings are done, put these files into `/home/root/`.
+
+** 1. Excute the Self-checkout-system demo ** 
+
+    python3 DEMO.py
 
