@@ -26,4 +26,4 @@ The following steps needs the board to have a path to the internet(script uses w
     sh install_vai.sh
     
     
-You are able to run the demo on the board, please check the `README.md` of `demo/`  
+You are able to run the demo on the board, please check <https://github.com/alex0620ee05/Self-checkout-system/blob/main/demo/Readme.md>  
