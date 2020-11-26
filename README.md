@@ -9,6 +9,8 @@
 
 ## Build and Setup the Environment of the ZCU104 board 
 
+**If you use the `sd_card.img` in `prebuilt/`, you can skip these steps** 
+
 ### Build Steps
 
 **1. Clone the full repository (including submodules)**
@@ -45,8 +47,13 @@ One time, and one time only, you must apply the patch in the hw_src directory ag
 **5. Get the SD card image**
   
   After above steps, you will get `sd_card.img` is in `sd_card_zcu104/`.
+  
   Or, you can download the prebuilt `sd_card.img`. (See <https://github.com/alex0620ee05/Self-checkout-system/tree/main/prebuilt/sd_card_image>) 
   
+### Preparing the SD Card for Vitis AI Library v1.2
+
+**See <https://github.com/alex0620ee05/Self-checkout-system/blob/main/set_up_files/README.md> for more detail
+
 
 ### Reference
 
