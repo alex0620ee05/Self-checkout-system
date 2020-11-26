@@ -6,7 +6,8 @@
 
 **1. Clone the full repository (including submodules)**
 
-``$ git clone --recurse-submodules https://github.com/alex0620ee05/Self-checkout-system``
+    $ git clone --recurse-submodules $ git clone --recurse-submodules https://github.com/Xilinx/Vitis-In-Depth-Tutorial
+    $ cd Vitis-In-Depth-Tutorial/Runtime_and_System_Optimization/Design_Tutorials/02-ivas-ml/
 
 **Note: Vitis Patch Required:** This design has a large rootfs, and Vitis 2020.1 has an issue packaging SD card images with ext4 partitions over 2GB. This patch changes the packaging flow to round up the initial rootfs size to the first full multiple of 512MB over the ext4 partition size. To install it:
 
