@@ -7,9 +7,9 @@
     
 **1. Excute the Self-checkout-system demo** 
 
-  * object detection from video source:     
+  * object detection from video source: (You need use the sd_card.img in <https://github.com/alex0620ee05/Self-checkout-system/tree/main/prebuilt/sd_card_image/vcu_decode>)    
   `python3 DEMO.py -v <mp4 video file>`  
     
-  * real time checkout-system with camera:  
+  * real time checkout-system with camera:  (You need use the sd_card.img in <https://github.com/alex0620ee05/Self-checkout-system/tree/main/prebuilt/sd_card_image/vcu_encode>)
   `python3 DEMO.py -c True`  
 
