@@ -4,7 +4,7 @@
 
 If all settings are done, put these files into `/home/root/`.
 
-** 1. Excute the Self-checkout-system demo ** 
+**1. Excute the Self-checkout-system demo** 
 
     python3 DEMO.py
 
