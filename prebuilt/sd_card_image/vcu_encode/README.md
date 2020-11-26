@@ -1,4 +1,4 @@
-# **Prebuilt sd_card image with VCU decode**
+# **Prebuilt sd_card image with VCU encode**
 
 **1. Burning the image on micro SDcard** (Check the link in GoogleDrive.txt)
 
