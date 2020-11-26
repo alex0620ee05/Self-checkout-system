@@ -30,7 +30,7 @@
     $ cd 02-ivas-ml/platform/dev/zcu104_vcu
     $ make
 
-* It's possible that errors occur when `petalinux-config kernel`, `petalinux-build`, `petalinux-build --sdk`. You should properly modify `Makefile` in `02-ivas-ml/platform/dev/zcu104_vcu` and `02-ivas-ml/platform/dev/zcu104_vcu/petalinux` to re do the command which got error(`make` again in `02-ivas-ml/platform/dev/zcu104_vcu`)
+* It's possible that errors occur when `petalinux-config kernel`, `petalinux-build`, `petalinux-build --sdk`. You should properly modify `Makefile` in `02-ivas-ml/platform/dev/zcu104_vcu` and `02-ivas-ml/platform/dev/zcu104_vcu/petalinux` to re do the command which got errors(`make` again in `02-ivas-ml/platform/dev/zcu104_vcu`)
 
 ### Reference
 
