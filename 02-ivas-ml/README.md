@@ -1,6 +1,6 @@
 # Build and Setup the Environment of the ZCU104 board 
 
-**If you use the `sd_card.img` in `prebuilt/`, you can skip these steps** 
+**If you use the `sd_card.img` in `prebuilt/`, you can skip these steps.** 
 
 ## Build Steps
 
