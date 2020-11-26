@@ -1,6 +1,6 @@
 # **Prebuilt sd_card image with VCU decode**
 
-**1. Burning the image on micro SDcard** (Check the link in GoogleDrive.txt)
+**1. Burning the image on micro SDcard** (Check the link in `GoogleDrive.txt`)
 
 Using an SD card flashing tool like dd, Win32DiskImager, or Balena Etcher, burn the image `sd_card.img` to an SD card and boot the board.
 
