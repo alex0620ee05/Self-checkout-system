@@ -4,8 +4,9 @@
 
   If all settings are done, put this directory into `/home/root/`. 
   
-**1. Install Vitis-AI-Library on target(ZCU104):**
-    Ref:https://github.com/Xilinx/Vitis-AI/tree/master/Vitis-AI-Library  --Setting Up the Target
+**1. Install Vitis-AI-Library on target(ZCU104):**  
+    Ref:https://github.com/Xilinx/Vitis-AI/tree/master/Vitis-AI-Library   
+    --Setting Up the Target -> 4.How to update Vitis AI Runtime and install them separately.
     
 **2. Excute the Self-checkout-system demo** 
     -object detection from video source:    
