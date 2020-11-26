@@ -11,6 +11,10 @@
 
 ### Build Steps
 
+**Note: Vitis Patch Required:** This design has a large rootfs, and Vitis 2020.1 has an issue packaging SD card images with ext4 partitions over 2GB. This patch changes the packaging flow to round up the initial rootfs size to the first full multiple of 512MB over the ext4 partition size. To install it:
+
+`$ cp ./vitis_patch/mkfsImage.sh ${XILINX_VITIS}/scripts/vitis/util`
+
 **1. Clone the full repository (including submodules)**
 
 ``$ git clone --recurse-submodules https://github.com/alex0620ee05/Self-checkout-system``
