@@ -1,11 +1,15 @@
 # **Self-checkout-system**
-## Self-checkout system for Adaptive Computing Developer Contest with Xilinx 2020 
+#### Self-checkout system for Adaptive Computing Developer Contest with Xilinx 2020 
 
-## Team MAAX
+#### Team MAAX
 
 <p align="center">
   <img src="github_images/IMG20201125172027.jpg" >
 </p>
+
+## Build and Setup the Environment of the ZCU104 board 
+
+
 
 ### Reference
 
