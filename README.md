@@ -9,6 +9,12 @@
 
 ## Build and Setup the Environment of the ZCU104 board 
 
+### Build Steps
+
+**1. Clone the full repository (including submodules)**
+
+``$ git clone --recurse-submodules https://github.com/alex0620ee05/Self-checkout-system``
+
 
 
 ### Reference
