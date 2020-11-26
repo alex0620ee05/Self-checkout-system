@@ -5,12 +5,19 @@ import SSD
 from threadedcapture import ThreadedCapture
 import time
 import window_system
+import argparse
 ll = ctypes.cdll.LoadLibrary
 lib = ll("./tfssdtest.so")
 #lib = ll("./ssdhardnet.so")
 lib.process.restype = ctypes.c_int
 #cam = cv2.VideoCapture(0)
-cam = ThreadedCapture(0)
+parser = argparse.ArgumentParser()
+parser.add_argument('-v', dest="source",type = str ,default='object_vid.mp4',
+                    help='video source')
+parser.add_argument('-c', dest="cam",type = bool ,default=False,
+                    help='use_camera')
+args = parser.parse_args() 
+cam = ThreadedCapture(args.source,args.cam)
 frame_count = 0
 time_start = time.time()
 total_call_func_time = 0
@@ -22,9 +29,11 @@ print(frame.shape[1],frame.shape[0])
 x_scale = frame.shape[1]/300
 y_scale = frame.shape[0]/300
 class_table = dict([(44,"bottle"),(47,"cup"),(48,"fork"),(50,"spoon"),(51,"bowl"),(52,"banana"),(53,"apple"),(55,"orange"),(58,"hot dog"),(60,"donut"),(87,"scissors")])
-while True:  
-  objects_cnt = np.zeros(CLASS_NUM,dtype='int')
-  frame_count+=1;  
+total_cnt = np.zeros(CLASS_NUM,dtype='float')
+objects_cnt = np.zeros(CLASS_NUM,dtype='int')
+current_frame_count = 0
+while True:
+  frame_count+=1;
   frame  = cam.read()
   if frame is None:
     break
@@ -40,12 +49,17 @@ while True:
     #print(data[i+0],data[i+1],data[i+2],data[i+3],data[i+4],data[i+5])
     cv2.rectangle(frame, (int(data[i*6+1]*x_scale),int(data[i*6+2]*y_scale)), (int(data[i*6+3]*x_scale),int(data[i*6+4]*y_scale)), (255,0,0),5)
     cv2.putText(frame, class_table[int(data[i*6])],(int(data[i*6+1]*x_scale+5),int(data[i*6+4]*y_scale-5)) , cv2.FONT_HERSHEY_COMPLEX, 1, (200, 0, 0), 2)
-    objects_cnt[int(data[i*6])]+=1
+    total_cnt[int(data[i*6])]+=1
   #print(time.time()-update_time)
   if time.time()-update_time > 1:
     update_time = time.time()  
     win_sys.clear()
     #win_sys.PutCamImg(frame)
+    ff = (frame_count-current_frame_count)
+    current_frame_count = frame_count
+    for i in range(CLASS_NUM):
+      objects_cnt[i] = int((total_cnt[i])/ff+0.8)
+    total_cnt = np.zeros(CLASS_NUM,dtype='float')   
     for i in range(CLASS_NUM):
       if objects_cnt[i]!=0:
         win_sys.Add_result(i,objects_cnt[i])

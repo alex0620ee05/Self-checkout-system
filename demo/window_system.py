@@ -3,8 +3,8 @@ import cv2
 from threadedcapture import ThreadedCapture
 import time
 
-class_table = dict([(44,"bottle"),(47,"cup"),(48,"fork"),(50,"spoon"),(51,"bowl"),(52,"banana"),(53,"apple"),(55,"orange"),(58,"hot dog"),(60,"donut"),(87,"scissors")])
-price_table = dict([(44,      30),(47,   49),(48,    25),(50,     20),(51,    39),(52,      18),(53,     40),(55,      25),(58,       39),(60,     40),(87,       140)])
+class_table = dict([(44,"coke"),(47,"cup"),(48,"fork"),(50,"spoon"),(51,"bowl"),(52,"banana"),(53,"apple"),(55,"orange"),(58,"hot dog"),(60,"donut"),(87,"scissors")])
+price_table = dict([(44,      1.89),(47,   2.00),(48,    1.20),(50,     1.30),(51,    1.40),(52,     0.59),(53,     1.15),(55,      0.99),(58,       1.25),(60,     2.49),(87,       5.50)])
 
 class WindowSystem () :
     
@@ -79,9 +79,9 @@ class WindowSystem () :
     
     def Add_result(self,object_class,object_num):
         text1 = class_table[object_class]
-        text2 = str(price_table[object_class])
+        text2 = str(format(price_table[object_class], '.2f'))
         text3 = str(object_num)
-        text4 = str(price_table[object_class]*object_num)
+        text4 = str(format(price_table[object_class]*object_num, '.2f'))
         cv2.putText(self.gui, text1,(self.text_1, self.item_x + 60*self.item_cnt) , cv2.FONT_HERSHEY_COMPLEX, 1, (200, 0, 0), 2)
         cv2.putText(self.gui, text2,(self.text_2, self.item_x + 60*self.item_cnt) , cv2.FONT_HERSHEY_COMPLEX, 1, (200, 0, 0), 2)
         cv2.putText(self.gui, text3,(self.text_3, self.item_x + 60*self.item_cnt) , cv2.FONT_HERSHEY_COMPLEX, 1, (200, 0, 0), 2)
@@ -102,10 +102,10 @@ class WindowSystem () :
     
     def show (self, img) :
         # show price
-        cv2.putText(self.gui, str(self.price), (self.ntd_y + 250, self.ntd_x + 70), cv2.FONT_HERSHEY_COMPLEX, 2, (200, 0, 0), 6)
+        cv2.putText(self.gui, str(format(self.price, '.2f')), (self.ntd_y + 250, self.ntd_x + 70), cv2.FONT_HERSHEY_COMPLEX, 2, (200, 0, 0), 6)
         
         # paste image 
         img = cv2.resize(img, (self.camimg_w, self.camimg_h), cv2.INTER_NEAREST)
         self.gui[self.camimg_x:self.camimg_x+img.shape[0], self.camimg_y:self.camimg_y+img.shape[1], :] = img
-        gui = cv2.resize(self.gui,(1200,680))
+        gui = cv2.resize(self.gui,(1200,660))
         cv2.imshow('Check Out So Easy', gui)
