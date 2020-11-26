@@ -9,7 +9,7 @@
 
 ### Build and Setup the Environment of the ZCU104 board 
 
-See <https://github.com/alex0620ee05/Self-checkout-system/blob/main/02-ivas-ml/README.md> for more details
+See <https://github.com/alex0620ee05/Self-checkout-system/blob/main/Build_sdcard/README.md> for more details
   
 ### Preparing the SD Card for Vitis AI Library v1.2
 
