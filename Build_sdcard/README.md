@@ -34,6 +34,8 @@ One time, and one time only, you must apply the patch in the hw_src directory ag
     $ patch -p1 < ../vision_lib_area_resize_ii_fix.patch
     
     $ cd ..
+    $ cp ../../../../../dpu_conf_zcu104.vh .
+    $ cp ../../../../../zcu10x_config .
     $ make
 
 **5. Get the SD card image**
