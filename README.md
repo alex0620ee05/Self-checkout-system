@@ -17,7 +17,7 @@
 
 **Note: Vitis Patch Required:** This design has a large rootfs, and Vitis 2020.1 has an issue packaging SD card images with ext4 partitions over 2GB. This patch changes the packaging flow to round up the initial rootfs size to the first full multiple of 512MB over the ext4 partition size. To install it:
 
-`$ cp ./vitis_patch/mkfsImage.sh ${XILINX_VITIS}/scripts/vitis/util`
+`$ cp ./02-ivas-ml/vitis_patch/mkfsImage.sh ${XILINX_VITIS}/scripts/vitis/util`
 
 **2. Source Vitis2020.1, PetaLinux2020.1 and XRT2020.1**
 
@@ -39,8 +39,14 @@ One time, and one time only, you must apply the patch in the hw_src directory ag
     $ cd ../../../hw_src/Vitis_Libraries
     $ patch -p1 < ../vision_lib_area_resize_ii_fix.patch
     
-    $ cd ../hw_src
+    $ cd ..
     $ make
+
+**5. Get the SD card image**
+  
+  After above steps, you will get `sd_card.img` is in `sd_card_zcu104/`.
+  Or, you can download the prebuilt `sd_card.img`. (See <https://github.com/alex0620ee05/Self-checkout-system/tree/main/prebuilt/sd_card_image>) 
+  
 
 ### Reference
 
