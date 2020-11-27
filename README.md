@@ -15,6 +15,10 @@ See <https://github.com/alex0620ee05/Self-checkout-system/blob/main/Build_sdcard
 
 See <https://github.com/alex0620ee05/Self-checkout-system/blob/main/set_up_files/README.md> for more details
 
+### Vitis-AI quantization and compilation  
+
+### Evaluate this project on board  
+
 
 ### Reference
 
