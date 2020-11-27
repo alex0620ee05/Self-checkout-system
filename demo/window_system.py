@@ -102,7 +102,7 @@ class WindowSystem () :
     
     def show (self, img) :
         # show price
-        cv2.putText(self.gui, str(format(self.price, '.2f')), (self.ntd_y + 250, self.ntd_x + 70), cv2.FONT_HERSHEY_COMPLEX, 2, (200, 0, 0), 6)
+        cv2.putText(self.gui, str(format(self.price, '.2f')), (self.ntd_y + 200, self.ntd_x + 70), cv2.FONT_HERSHEY_COMPLEX, 2, (200, 0, 0), 6)
         
         # paste image 
         img = cv2.resize(img, (self.camimg_w, self.camimg_h), cv2.INTER_NEAREST)

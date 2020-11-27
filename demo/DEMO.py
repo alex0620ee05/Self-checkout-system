@@ -28,7 +28,7 @@ frame = cam.read()
 print(frame.shape[1],frame.shape[0])
 x_scale = frame.shape[1]/300
 y_scale = frame.shape[0]/300
-class_table = dict([(44,"bottle"),(47,"cup"),(48,"fork"),(50,"spoon"),(51,"bowl"),(52,"banana"),(53,"apple"),(55,"orange"),(58,"hot dog"),(60,"donut"),(87,"scissors")])
+class_table = dict([(44,"coke"),(47,"cup"),(48,"fork"),(50,"spoon"),(51,"bowl"),(52,"banana"),(53,"apple"),(55,"orange"),(58,"hot dog"),(60,"donut"),(87,"scissors")])
 total_cnt = np.zeros(CLASS_NUM,dtype='float')
 objects_cnt = np.zeros(CLASS_NUM,dtype='int')
 current_frame_count = 0
