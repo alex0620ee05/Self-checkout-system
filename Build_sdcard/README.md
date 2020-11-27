@@ -42,5 +42,5 @@ One time, and one time only, you must apply the patch in the hw_src directory ag
   
   After above steps, you will get `sd_card.img` is in `sd_card_zcu104/`.
   
-  Or, you can download the prebuilt `sd_card.img`. (See <https://github.com/alex0620ee05/Self-checkout-system/tree/main/prebuilt/sd_card_image>) 
+  Or, you can download the prebuilt `sd_card.img`. (See [SD card image](https://github.com/alex0620ee05/Self-checkout-system/tree/main/prebuilt/sd_card_image)) 
 
