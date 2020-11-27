@@ -77,7 +77,7 @@ The following steps needs the board to have a path to the internet(script uses w
     sh update.sh
     sh install_vai.sh  
 ### [Step 3 :Vitis-AI quantization and compilation](https://github.com/alex0620ee05/Self-checkout-system/tree/main/host)  
-**The compiled file `ssd_mobilenet_v2_coco_tf.elf` is already in `/demo`, you can skip this step and directly use the provided file**  
+**The compiled file `ssd_mobilenet_v2_coco_tf.elf` is already in `demo/`, you can skip this step and directly use the provided file**  
 **1. Build Vitis-AI environment**  
 Follow the steps on https://github.com/Xilinx/Vitis-AI/blob/master/README.md to build docker.  
 `./docker_run.sh xilinx/vitis-ai-gpu:latest`  
@@ -105,13 +105,13 @@ Copy the compiled file to `/DEMO` for the next step .
 
   ### Real time checkout-system with camera(Our main project):  
   
-  * You need to use the `sd_card.img` in [/vcu_encode](https://github.com/alex0620ee05/Self-checkout-system/tree/main/prebuilt/sd_card_image/vcu_encode)
+  * You need to use the `sd_card.img` in [vcu_encode/](https://github.com/alex0620ee05/Self-checkout-system/tree/main/prebuilt/sd_card_image/vcu_encode)
   
   `python3 DEMO.py -c True` 
 
   ### Object detection from video source:
   
-  * You need to use the `sd_card.img` in [/vcu_decode](https://github.com/alex0620ee05/Self-checkout-system/tree/main/prebuilt/sd_card_image/vcu_decode)
+  * You need to use the `sd_card.img` in [vcu_decode/](https://github.com/alex0620ee05/Self-checkout-system/tree/main/prebuilt/sd_card_image/vcu_decode)
   
   `python3 DEMO.py -v <mp4 video file>`  
 ### Reference
