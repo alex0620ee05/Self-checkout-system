@@ -2,7 +2,7 @@
 * Step 1 : Build Vitis-AI environment  
 Follow the steps on https://github.com/Xilinx/Vitis-AI/blob/master/README.md to build docker.  
 `./docker_run.sh xilinx/vitis-ai-gpu:latest` 
-* Step 2 : Download tensorflow models from xilinx model zoo  
+* Step 2 : Download tensorflow models from Xilinx AI model zoo  
 You can get models by following the instructions on https://github.com/Xilinx/Vitis-AI/tree/master/AI-Model-Zoo  
 In our project , we use xilinx_model_sample/tf_ssdmobilenetv2_coco_300_300_3.75G as our object detection model.  
 Copy `xilinx_model_sample/tf_ssdmobilenetv2_coco_300_300_3.75G/quantized/deploy_model.pb` to `host/ssd_mobilenet`.  
