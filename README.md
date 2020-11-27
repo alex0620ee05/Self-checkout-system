@@ -4,7 +4,7 @@
 #### Team MAAX
 
 <p align="center">
-  <img src="github_images/IMG20201125172027.jpg" >
+  <img src="github_images/IMG20201127164739.jpg" >
 </p>
 
 ### [Step 1 : Build and Setup the Environment of the ZCU104 board](https://github.com/alex0620ee05/Self-checkout-system/blob/main/Build_sdcard)    
