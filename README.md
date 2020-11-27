@@ -22,5 +22,5 @@ See <>for more details
 If the above steps are completed , copy the `DEMO` file to target(ZCU104).  
 run `python3 DEMO.py -v <mp4 video filename>` to start demo!  
 ### Reference
-<https://github.com/Xilinx/Vitis-AI>
+[Xilinx/Vitis-AI](https://github.com/Xilinx/Vitis-AI)  
 <https://github.com/Xilinx/Vitis-In-Depth-Tutorial/tree/master/Runtime_and_System_Optimization/Design_Tutorials/02-ivas-ml>
