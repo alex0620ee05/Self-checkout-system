@@ -8,7 +8,7 @@
 </p>
 
 ### [Step 1 : Build and Setup the Environment of the ZCU104 board](https://github.com/alex0620ee05/Self-checkout-system/blob/main/Build_sdcard)   
-**If you use the `sd_card.img` in `prebuilt/`, you can skip these steps. (step 5)** 
+**If you use the `sd_card.img` in `prebuilt/`, you can skip these steps. (5.)** 
 
 ## Build Steps
 
@@ -77,7 +77,7 @@ The following steps needs the board to have a path to the internet(script uses w
     sh update.sh
     sh install_vai.sh  
 ### [Step 3 :Vitis-AI quantization and compilation](https://github.com/alex0620ee05/Self-checkout-system/tree/main/host)  
-* **The compiled file `ssd_mobilenet_v2_coco_tf.elf` is already in `/demo`, you can skip this step and directly use the provided file**
+**The compiled file `ssd_mobilenet_v2_coco_tf.elf` is already in `/demo`, you can skip this step and directly use the provided file**
 **1. Build Vitis-AI environment**  
 Follow the steps on https://github.com/Xilinx/Vitis-AI/blob/master/README.md to build docker.  
 `./docker_run.sh xilinx/vitis-ai-gpu:latest` 
@@ -88,15 +88,32 @@ Copy `xilinx_model_sample/tf_ssdmobilenetv2_coco_300_300_3.75G/quantized/deploy_
 **3. Compile the tensorflow model**  
 After excuting`./ssdmobilenet_compile_b4096.sh`,you will get dpu_ssd_mobilenet_v2_coco_tf.elf  
 ### [Step 4 :Cross-compile the DPU inference code](github.com/alex0620ee05/Self-checkout-system/tree/main/Vitis-AI/Vitis-AI-Library/overview/demo/tfssd_mobilenet)  
-* **The compiled file `tfssdtest.so` is already in `/demo`, you can skip this step and directly use the provided file**
+**The compiled file `tfssdtest.so` is already in `/demo`, you can skip this step and directly use the provided file**  
 **1. Setting Up the Host**  
-Follow the steps on <https://github.com/Xilinx/Vitis-AI/tree/master/Vitis-AI-Library>  
+Follow the steps on [Xilinx/Vitis-AI-Library](https://github.com/Xilinx/Vitis-AI/tree/master/Vitis-AI-Library)  
 **2. Cross-compile**  
 run `./build_final.sh` , you will get a compiled file `tfssdtest.so` with `ELF 64-bit LSB shared object, ARM aarch64 format`.  
 Copy the compiled file to `/DEMO` for the next step .  
 ### [Step 5 :Evaluate this project on board](https://github.com/alex0620ee05/Self-checkout-system/tree/main/demo)  
-If the above steps are completed , copy the `DEMO` file to target(ZCU104).  
-run `python3 DEMO.py -v <mp4 video filename>` to start demo!  
+* Following steps are on the target(ZCU104):
+
+  If all settings are done, put the directory `demo` into `/home/root/`. 
+  
+**1. Revise the display resolution **
+    sh set_monitor.sh  
+**2. Excute the Self-checkout-system demo** 
+
+  ### Real time checkout-system with camera(Our main project):  
+  
+  * You need to use the `sd_card.img` in [/vcu_encode](https://github.com/alex0620ee05/Self-checkout-system/tree/main/prebuilt/sd_card_image/vcu_encode)
+  
+  `python3 DEMO.py -c True` 
+
+  ### Object detection from video source:
+  
+  * You need to use the `sd_card.img` in [/vcu_decode](https://github.com/alex0620ee05/Self-checkout-system/tree/main/prebuilt/sd_card_image/vcu_decode)
+  
+  `python3 DEMO.py -v <mp4 video file>`  
 ### Reference
 Xilinx Vitis-AI quantizer & compiler / Xilinx Vitis-Ai-Library : [Xilinx/Vitis-AI](https://github.com/Xilinx/Vitis-AI)  
 Xilinx Vitis Tutorial : [Xilinx/Vitis-In-Depth-Tutorial](https://github.com/Xilinx/Vitis-In-Depth-Tutorial/tree/master/Runtime_and_System_Optimization/Design_Tutorials/02-ivas-ml)
