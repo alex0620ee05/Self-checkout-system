@@ -11,7 +11,7 @@
 * You need to use the `sd_card.img` in [vcu_decode/](https://github.com/alex0620ee05/Self-checkout-system/tree/main/prebuilt/sd_card_image/vcu_decode)  
   ### Real time checkout-system with camera:   
       python3 DEMO.py -c True 
-  ### Checkout-system from video source:   
+  ### Checkout-system with video source:   
       python3 DEMO.py -v <mp4 video file>  
     
  
